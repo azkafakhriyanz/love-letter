@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastel Candy Pop Love Letter 🍬💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+
+  <canvas id="bg-canvas"></canvas>
+
+  <canvas id="game-canvas"></canvas>
+
+  <div class="top-controls">
+    <button class="icon-toggle-btn" id="theme-btn" title="Toggle Light/Dark Mode">☀️</button>
+    <button class="icon-toggle-btn" id="lang-btn" title="Toggle Language">ID</button>
+  </div>
+
+  <div class="sender-badge" id="sender-badge">
+    <div class="badge-content">
+      <span data-i18n="from_label">From</span>: <span class="badge-pink" id="badge-from">Azka</span> 
+      <span class="badge-star">✦</span> 
+      <span data-i18n="to_label">To</span>: <span class="badge-blue" id="badge-to">Special Person</span> 💖
+    </div>
+    <button class="edit-btn" id="edit-btn">✏️ Edit</button>
+  </div>
+
+  <div class="instruction-tag" id="instruction-tag">
+    <span data-i18n="instruction_text">✨ Tarik tali busurnya lalu lepaskan untuk memanah surat! ✨</span>
+  </div>
+
+  <div class="modal-overlay" id="modal-edit">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 data-i18n="modal_title">Kustomisasi Nama 🍬</h3>
+      </div>
+      <div class="input-group">
+        <label data-i18n="label_from">Dari (Pengirim):</label>
+        <input type="text" id="input-from" value="Azka" placeholder="Nama kamu">
+      </div>
+      <div class="input-group">
+        <label data-i18n="label_to">Untuk (Penerima):</label>
+        <input type="text" id="input-to" value="Special Person" placeholder="Nama pasangan/gebetan">
+      </div>
+      <button class="save-btn" id="save-name-btn" data-i18n="save_btn">Simpan & Mulai 💕</button>
+    </div>
+  </div>
+
+  <div class="overlay-container">
+
+    <div class="candy-card" id="box-confess">
+      <div class="card-badge" data-i18n="confess_badge">CANDY CONFESSION 💌</div>
+
+      <h2 class="question-text">
+        <span data-i18n="question_main">Do you want to be my</span> <br>
+        <span class="highlight-pink" data-i18n="question_highlight">girlfriend?</span> 💭
+      </h2>
+
+      <div class="cute-cat-avatar">
+        <div class="cat-head">
+          <div class="cat-ear left"></div>
+          <div class="cat-ear right"></div>
+          <div class="cat-eye left"></div>
+          <div class="cat-eye right"></div>
+          <div class="cat-blush left"></div>
+          <div class="cat-blush right"></div>
+          <div class="cat-nose"></div>
+          <div class="bouncy-heart">💖</div>
+        </div>
+      </div>
+
+      <div class="btn-group" id="btn-group">
+        <button class="candy-btn btn-yes" id="btn-yes">YES! 💕</button>
+        <button class="candy-btn btn-no" id="btn-no">NO 😜</button>
+      </div>
+    </div>
+>
+    <div class="candy-card" id="box-victory">
+      <div class="card-badge victory" data-i18n="victory_badge">OFFICIAL COUPLE MOMENT 🎉</div>
+
+      <h2 class="victory-title" data-i18n="victory_title">Yayy! I Love You! 💖</h2>
+
+      <div class="cute-cat-avatar happy">
+        <div class="cat-head">
+          <div class="cat-ear left"></div>
+          <div class="cat-ear right"></div>
+          <div class="cat-eye happy-left"></div>
+          <div class="cat-eye happy-right"></div>
+          <div class="cat-blush left"></div>
+          <div class="cat-blush right"></div>
+          <div class="cat-nose"></div>
+          <div class="bouncy-heart">💖✨</div>
+        </div>
+      </div>
+
+      <div class="letter-paper">
+        <p data-i18n="letter_p1">Makasih yaa udah mau klik <b>YES!</b> 🥳✨</p>
+        <p data-i18n="letter_p2">Tombol NO itu emang sengaja dibikin melompat terus soalnya gak ada alasan buat kamu nolak hehe 😜❤️</p>
+        <div class="signature" id="letter-signature">— Azka 💕</div>
+      </div>
+
+      <div class="action-buttons">
+        <a href="#" target="_blank" class="candy-btn btn-wa" id="wa-share-btn" data-i18n="wa_btn">Kirim Balasan via WhatsApp 📲</a>
+        <button class="candy-btn btn-restart" id="btn-restart" data-i18n="restart_btn">Main Lagi 🔄</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="toast-candy" id="toast">Eits, gak bisa pencet NO! 😜</div>
+
+  <div class="credit-badge">
+    Code by <span>kaaz/&gt;</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
